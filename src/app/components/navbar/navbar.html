@@ -3,7 +3,12 @@
   <div class="nav-links">
     <a routerLink="/home">Produtos</a>
     <ng-container *ngIf="isAuthenticated()">
-      <a routerLink="/cart">Carrinho</a>
+      <a routerLink="/cart">
+        Carrinho
+        <span class="cart-badge" *ngIf="totalCartItems() > 0"
+          >{{ totalCartItems() }}</span
+        >
+      </a>
       <a routerLink="/admin">Admin</a>
       <button (click)="logout()">Logout</button>
     </ng-container>

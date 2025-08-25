@@ -3,6 +3,7 @@ import { ProductService } from '../../services/product-service';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { ProductModel } from '../../models/product-model';
+import { CartService } from '../../services/cart-service';
 
 @Component({
   selector: 'app-product-detail',
@@ -13,6 +14,7 @@ import { ProductModel } from '../../models/product-model';
 export class ProductDetail implements OnInit {
   private route = inject(ActivatedRoute);
   private productService = inject(ProductService);
+  private cartService = inject(CartService);
 
   product: ProductModel | null = null;
 
@@ -26,7 +28,9 @@ export class ProductDetail implements OnInit {
   }
 
   addToCart(): void {
-    // Lógica para adicionar ao carrinho virá aqui
-    console.log('Produto adicionado:', this.product);
+    if (this.product) {
+      this.cartService.addToCart(this.product);
+      alert('Produto adicionado ao carrinho!');
+    }
   }
 }
