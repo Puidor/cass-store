@@ -1,0 +1,14 @@
+<nav class="navbar">
+  <a class="brand" routerLink="/home">Cass Store</a>
+  <div class="nav-links">
+    <a routerLink="/home">Produtos</a>
+    <ng-container *ngIf="isAuthenticated()">
+      <a routerLink="/cart">Carrinho</a>
+      <a routerLink="/admin">Admin</a>
+      <button (click)="logout()">Logout</button>
+    </ng-container>
+    <ng-container *ngIf="!isAuthenticated()">
+      <a routerLink="/login">Login</a>
+    </ng-container>
+  </div>
+</nav>
