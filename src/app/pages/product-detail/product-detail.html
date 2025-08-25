@@ -1,0 +1,12 @@
+<div *ngIf="product; else loading" class="product-container">
+  <img [src]="product.image" [alt]="product.title" />
+  <div class="product-info">
+    <h2>{{ product.title }}</h2>
+    <p class="price">{{ product.price | currency:'BRL' }}</p>
+    <p class="description">{{ product.description }}</p>
+    <button (click)="addToCart()">Adicionar ao Carrinho</button>
+  </div>
+</div>
+<ng-template #loading>
+  <p>Carregando produto...</p>
+</ng-template>
