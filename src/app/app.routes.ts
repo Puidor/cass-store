@@ -11,4 +11,9 @@ export const routes: Routes = [
   { path: 'product/:id', component: ProductDetail },
   { path: 'login', component: Login },
   { path: 'cart', component: Cart, canActivate: [authGuard] },
+  {
+    path: 'admin',
+    loadChildren: () =>
+      import('./pages/admin/admin.routes').then((m) => m.ADMIN_ROUTES),
+  },
 ];
