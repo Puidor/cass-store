@@ -4,6 +4,10 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 
+## Link da aplicação
+
+https://cass-store.vercel.app/home
+
 ## 📜 Descrição
 
 **Cass Store** é uma Single-Page Application (SPA) que simula o front-end de uma loja online. A aplicação não possui um back-end próprio; em vez disso, consome a API pública e gratuita [FakeStoreAPI](https://fakestoreapi.com/) para obter dados de produtos, usuários e autenticação.
