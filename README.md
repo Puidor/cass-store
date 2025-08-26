@@ -1,59 +1,57 @@
-# CassStore
+# Cass Store - E-commerce
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 
-## Development server
+## 📜 Descrição
 
-To start a local development server, run:
+**Cass Store** é uma Single-Page Application (SPA) que simula o front-end de uma loja online. A aplicação não possui um back-end próprio; em vez disso, consome a API pública e gratuita [FakeStoreAPI](https://fakestoreapi.com/) para obter dados de produtos, usuários e autenticação.
 
-```bash
-ng serve
-```
+---
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## ✨ Funcionalidades Principais
 
-## Code scaffolding
+- **Listagem de Produtos:** Visualização de produtos na página inicial.
+- **Detalhes do Produto:** Página com informações completas de cada produto.
+- **Autenticação de Usuário:** Sistema de Login e Logout utilizando autenticação baseada em Token JWT.
+- **Carrinho de Compras:** Adicione, visualize e remova produtos do carrinho.
+- **Rotas Protegidas:** As páginas de Carrinho e Admin só são acessíveis para usuários autenticados.
+- **Painel de Administração:** Uma área de admin simples para visualizar e deletar produtos.
+- **Lazy Loading:** O módulo de Administração é carregado sob demanda para otimizar o carregamento inicial da aplicação.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## 🚀 Como Executar o Projeto Localmente
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Siga os passos abaixo para rodar o projeto na sua máquina.
 
-```bash
-ng generate --help
-```
+### Pré-requisitos
 
-## Building
+- [Node.js](https://nodejs.org/) (versão LTS recomendada)
+- [Angular CLI](https://angular.io/cli) (`npm install -g @angular/cli`)
 
-To build the project run:
+### Instalação
 
-```bash
-ng build
-```
+1.  Clone o repositório:
+    ```bash
+    git clone https://github.com/Puidor/cass-store
+    ```
+2.  Navegue até a pasta do projeto:
+    ```bash
+    cd cass-store
+    ```
+3.  Instale as dependências:
+    ```bash
+    npm install
+    ```
+4.  A aplicação estará disponível em `http://localhost:4200/`.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## 🔑 API e Credenciais de Teste
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Este projeto utiliza a [FakeStoreAPI](https://fakestoreapi.com/docs) para todos os dados. Para testar o fluxo de login, utilize as seguintes credenciais:
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- **Usuário:** `mor_2314`
+- **Senha:** `83r5^_`

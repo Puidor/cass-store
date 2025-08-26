@@ -12,13 +12,15 @@ export class ProductService {
 
   constructor() {}
 
-  // Busca todos os produtos
   getAllProducts(): Observable<ProductModel[]> {
     return this.http.get<ProductModel[]>(`${this.apiUrl}/products`);
   }
 
-  // Busca um produto específico pelo ID
   getProductById(id: number): Observable<ProductModel> {
     return this.http.get<ProductModel>(`${this.apiUrl}/products/${id}`);
+  }
+
+  deleteProduct(id: number): Observable<ProductModel> {
+    return this.http.delete<ProductModel>(`${this.apiUrl}/products/${id}`);
   }
 }
