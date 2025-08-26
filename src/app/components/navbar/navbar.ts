@@ -17,6 +17,11 @@ export class Navbar {
   isAuthenticated = this.authService.isAuthenticated;
   totalCartItems = this.cartService.totalItems;
 
+  isMenuOpen = false;
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
   logout(): void {
     this.authService.logout();
   }

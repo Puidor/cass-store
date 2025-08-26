@@ -22,8 +22,16 @@ export class CartService {
   }
 
   removeFromCart(productId: number) {
-    this.cartItems.update((items) =>
-      items.filter((product) => product.id !== productId)
-    );
+    this.cartItems.update((items) => {
+      const indexToRemove = items.findIndex((item) => item.id === productId);
+
+      if (indexToRemove > -1) {
+        const newItems = [...items];
+        newItems.splice(indexToRemove, 1);
+        return newItems;
+      }
+
+      return items;
+    });
   }
 }
