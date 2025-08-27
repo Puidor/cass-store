@@ -49,6 +49,11 @@ Siga os passos abaixo para rodar o projeto na sua máquina.
     ```bash
     npm install
     ```
+4.  **Inicie a aplicação:**
+
+    ```bash
+    npm run start
+    ```
 4.  A aplicação estará disponível em `http://localhost:4200/`.
 
 ---
